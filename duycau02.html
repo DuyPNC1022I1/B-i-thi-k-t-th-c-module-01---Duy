@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web test bai hoc </title>
+</head>
+<body>
+<script>
+    function insertNumberToArray(array, x, index) {
+        if ((index < 0) || (index > array.length)) {
+            return array;
+        }
+        else {
+            array = array.splice(index, 0, x);
+        }
+        return array;
+    }
+</script>
+</body>
+</html>

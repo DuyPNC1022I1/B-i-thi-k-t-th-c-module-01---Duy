@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web test bai hoc </title>
+</head>
+<body>
+<script>
+    // Check số nguyên tố a bất kỳ có là số nguyên tố?
+    function checkPrime (a) {
+        let check = true; // Gán check = true là điều kiện để là số nguyên tố
+        if (a < 2) {
+            check = false;
+        }
+        else {
+            for (let i = 2; i < a - 1; i++) {
+                if (a % i === 0) {
+                    check = false;
+                    break;
+                }
+            }
+        }
+        return check;
+    }
+
+    // Tính tổng số nguyên tố từ 0 tới x
+    let sum = 0;
+    function sumOfListPrime(x) {
+        for (let i = 0; i < x; i++) {
+            if (checkPrime(i)) {
+                sum += i;
+            }
+        }
+        return sum;
+    }
+</script>
+</body>
+</html>
